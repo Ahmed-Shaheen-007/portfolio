@@ -133,7 +133,17 @@ export default function CertificatesSection() {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-muted-foreground">
+          <a
+            href="https://drive.google.com/drive/folders/1FNbomF01IWk2eGE_QLC4FG0C1WEcEZfN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            data-testid="google-drive-certificates"
+          >
+            <ExternalLink size={20} />
+            <span>View All Certificates</span>
+          </a>
+          <p className="text-muted-foreground mt-4">
             More certifications in progress. Check back for updates!
           </p>
         </div>

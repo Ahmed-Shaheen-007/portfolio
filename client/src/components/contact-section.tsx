@@ -5,22 +5,22 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      description: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      description: "Get in touch via email",
+      href: "mailto:contact@example.com",
       bgHover: "group-hover:bg-primary/20"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      description: "Connect with me",
-      href: "https://linkedin.com/in/yourprofile",
+      description: "Connect with me professionally",
+      href: "https://linkedin.com/in/ahmed-shaheen",
       bgHover: "group-hover:bg-primary/20"
     },
     {
       icon: Github,
       title: "GitHub",
-      description: "View my code",
-      href: "https://github.com/yourusername",
+      description: "View my projects and code",
+      href: "https://github.com/Ahmed-Shaheen-007",
       bgHover: "group-hover:bg-primary/20"
     }
   ];
