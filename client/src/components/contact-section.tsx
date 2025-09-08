@@ -6,14 +6,14 @@ export default function ContactSection() {
       icon: Mail,
       title: "Email",
       description: "Get in touch via email",
-      href: "mailto:contact@example.com",
+      href: "ahmed.dev.se@gmail.com",
       bgHover: "group-hover:bg-primary/20"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       description: "Connect with me professionally",
-      href: "https://linkedin.com/in/ahmed-shaheen",
+      href: "https://www.linkedin.com/in/ahmedemad-",
       bgHover: "group-hover:bg-primary/20"
     },
     {
@@ -26,8 +26,8 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="contact" className="py-24 bg-gradient-to-br from-muted/50 via-background to-muted/30 section-pattern">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-4xl font-bold text-foreground mb-4" data-testid="contact-title">Get In Touch</h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto" data-testid="contact-description">
@@ -43,7 +43,7 @@ export default function ContactSection() {
                 href={method.href}
                 target={method.href.startsWith('http') ? '_blank' : undefined}
                 rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="bg-card p-6 rounded-xl shadow-lg border border-border card-hover group"
+                className="glass-card gradient-border p-8 rounded-2xl shadow-2xl card-hover group"
                 data-testid={`contact-${method.title.toLowerCase()}`}
               >
                 <div className={`w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 ${method.bgHover} transition-colors`}>

@@ -47,8 +47,8 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 bg-gradient-to-br from-muted/50 via-background to-muted/30 section-pattern">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4" data-testid="skills-title">Skills & Expertise</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -60,7 +60,7 @@ export default function SkillsSection() {
             return (
               <div 
                 key={index} 
-                className="bg-card p-8 rounded-xl shadow-lg border border-border card-hover"
+                className="glass-card gradient-border p-8 rounded-2xl shadow-2xl card-hover"
                 data-testid={`skill-category-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="text-center mb-6">

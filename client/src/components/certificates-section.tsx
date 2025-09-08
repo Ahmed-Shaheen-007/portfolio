@@ -8,28 +8,28 @@ export default function CertificatesSection() {
       date: "2024",
       description: "Cloud fundamentals and AWS services overview",
       type: "Cloud Computing",
-      status: "In Progress"
+      status: "Completed"
     },
     {
       title: "Microsoft Power BI Data Analyst",
       issuer: "Microsoft",
-      date: "2023",
+      date: "2025",
       description: "Advanced data visualization and dashboard creation",
       type: "Data Visualization",
-      status: "Completed"
+      status: "In Progress"
     },
     {
-      title: "Google Data Analytics Professional",
-      issuer: "Google",
-      date: "2023",
+      title: "Data Engineer Certification",
+      issuer: "DataCamp",
+      date: "2025",
       description: "Data analysis fundamentals and practical applications",
       type: "Data Analysis",
-      status: "Completed"
+      status: "In Progress"
     },
     {
       title: "Python for Data Science",
       issuer: "DataCamp",
-      date: "2023",
+      date: "2024",
       description: "Python programming for data analysis and machine learning",
       type: "Programming",
       status: "Completed"
@@ -63,8 +63,8 @@ export default function CertificatesSection() {
   };
 
   return (
-    <section id="certificates" className="py-20 bg-muted">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="certificates" className="py-24 bg-gradient-to-br from-muted/50 via-background to-muted/30 section-pattern">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4" data-testid="certificates-title">
             Certificates & Credentials
@@ -79,7 +79,7 @@ export default function CertificatesSection() {
           {certificates.map((cert, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-xl shadow-lg border border-border p-6 card-hover"
+              className="glass-card gradient-border rounded-2xl shadow-2xl p-8 card-hover"
               data-testid={`certificate-card-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex items-start justify-between mb-4">
@@ -109,23 +109,6 @@ export default function CertificatesSection() {
                     {cert.type}
                   </span>
                   <span className="text-sm text-muted-foreground">{cert.date}</span>
-                </div>
-                
-                <div className="flex space-x-2">
-                  <button 
-                    className="text-primary hover:text-primary/80 p-2"
-                    data-testid={`button-view-certificate-${index}`}
-                    title="View Certificate"
-                  >
-                    <ExternalLink size={16} />
-                  </button>
-                  <button 
-                    className="text-muted-foreground hover:text-foreground p-2"
-                    data-testid={`button-download-certificate-${index}`}
-                    title="Download Certificate"
-                  >
-                    <Download size={16} />
-                  </button>
                 </div>
               </div>
             </div>

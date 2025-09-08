@@ -5,8 +5,8 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-gradient-to-br from-background via-muted/20 to-background section-pattern">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4" data-testid="about-title">About Me</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -23,7 +23,7 @@ export default function AboutSection() {
             </p>
           </div>
           
-          <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
+          <div className="glass-card gradient-border p-10 rounded-2xl shadow-2xl card-hover">
             <h4 className="text-xl font-semibold text-foreground mb-6" data-testid="core-tech-title">Core Technologies</h4>
             <div className="grid grid-cols-2 gap-4">
               {coreSkills.map((skill, index) => (
