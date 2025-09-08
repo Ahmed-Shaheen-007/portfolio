@@ -7,10 +7,10 @@ export default function ProjectsSection() {
       title: "Sales Analytics Dashboard",
       description: "Built an interactive Power BI dashboard analyzing sales performance across multiple regions. Implemented automated data refresh and created KPI tracking that helped increase revenue by 15%.",
       tools: [
-        { name: "Power BI", color: "bg-primary/10 text-primary" },
-        { name: "SQL", color: "bg-primary/10 text-primary" },
-        { name: "Python", color: "bg-primary/10 text-primary" },
-        { name: "ETL", color: "bg-primary/10 text-primary" }
+        { name: "Power BI", color: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" },
+        { name: "SQL", color: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" },
+        { name: "Python", color: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" },
+        { name: "ETL", color: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" }
       ],
       gradientFrom: "from-primary/20",
       gradientTo: "to-primary/5",
@@ -21,28 +21,42 @@ export default function ProjectsSection() {
       title: "Automated Data Pipeline",
       description: "Designed and implemented an automated ETL pipeline processing 100GB+ daily data from multiple sources. Reduced data processing time by 60% and improved data quality with validation checks.",
       tools: [
-        { name: "Python", color: "bg-green-100 text-green-700" },
-        { name: "Apache Airflow", color: "bg-green-100 text-green-700" },
-        { name: "PostgreSQL", color: "bg-green-100 text-green-700" },
-        { name: "AWS", color: "bg-green-100 text-green-700" }
+        { name: "Python", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
+        { name: "Apache Airflow", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
+        { name: "PostgreSQL", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
+        { name: "AWS", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" }
       ],
       gradientFrom: "from-green-500/20",
       gradientTo: "to-green-500/5",
-      iconColor: "text-green-600"
+      iconColor: "text-green-600 dark:text-green-400"
     },
     {
       icon: Brain,
       title: "Customer Segmentation Analysis",
       description: "Performed advanced customer segmentation using machine learning clustering algorithms. Created actionable insights that improved targeted marketing campaigns by 25% conversion rate.",
       tools: [
-        { name: "Python", color: "bg-purple-100 text-purple-700" },
-        { name: "Scikit-learn", color: "bg-purple-100 text-purple-700" },
-        { name: "Pandas", color: "bg-purple-100 text-purple-700" },
-        { name: "Tableau", color: "bg-purple-100 text-purple-700" }
+        { name: "Python", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
+        { name: "Scikit-learn", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
+        { name: "Pandas", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
+        { name: "Tableau", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" }
       ],
       gradientFrom: "from-purple-500/20",
       gradientTo: "to-purple-500/5",
-      iconColor: "text-purple-600"
+      iconColor: "text-purple-600 dark:text-purple-400"
+    },
+    {
+      icon: Activity,
+      title: "Real-time Stock Analysis",
+      description: "Developed a real-time data streaming application for stock market analysis using financial APIs. Created automated alerts and trend analysis with interactive visualizations.",
+      tools: [
+        { name: "Python", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
+        { name: "Pandas", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
+        { name: "NumPy", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
+        { name: "Streamlit", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" }
+      ],
+      gradientFrom: "from-blue-500/20",
+      gradientTo: "to-blue-500/5",
+      iconColor: "text-blue-600 dark:text-blue-400"
     }
   ];
 
