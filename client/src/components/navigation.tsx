@@ -7,7 +7,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'certificates', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -41,10 +41,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
+    { id: 'home', label: 'Portfolio' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
+    { id: 'certificates', label: 'Certificates' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -53,7 +54,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-primary" data-testid="brand-name">Ahmed</span>
+            <span className="text-xl font-bold text-primary" data-testid="brand-name">Portfolio</span>
           </div>
           
           {/* Desktop Navigation */}
