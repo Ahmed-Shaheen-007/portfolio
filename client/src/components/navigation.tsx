@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun, Github } from "lucide-react";
+import { useTheme } from "./theme-provider";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,8 +60,8 @@ export default function Navigation() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex items-center">
+            <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -75,10 +77,53 @@ export default function Navigation() {
                 </button>
               ))}
             </div>
+            
+            {/* Theme Toggle and GitHub Button */}
+            <div className="flex items-center space-x-4 ml-8">
+              <button
+                onClick={toggleTheme}
+                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                data-testid="theme-toggle"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              
+              <a
+                href="https://github.com/Ahmed-Shaheen-007"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                data-testid="github-link"
+                aria-label="GitHub Profile"
+              >
+                <Github size={20} />
+              </a>
+            </div>
           </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and controls */}
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-muted-foreground hover:text-primary transition-colors"
+              data-testid="mobile-theme-toggle"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            
+            <a
+              href="https://github.com/Ahmed-Shaheen-007"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-muted-foreground hover:text-primary transition-colors"
+              data-testid="mobile-github-link"
+              aria-label="GitHub Profile"
+            >
+              <Github size={20} />
+            </a>
+            
             <button 
               className="text-muted-foreground hover:text-primary"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
