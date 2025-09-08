@@ -14,12 +14,12 @@ export default function AboutSection() {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground" data-testid="about-greeting">Hello, I'm Ahmed</h3>
+            <h3 className="text-2xl font-semibold text-foreground" data-testid="about-greeting">About Me</h3>
             <p className="text-lg text-muted-foreground leading-relaxed" data-testid="about-bio">
-              Computer Science student, passionate about data, working towards a career in machine learning and data science. I believe that data has the power to solve complex problems and drive meaningful business decisions.
+              Computer Science student passionate about transforming raw data into meaningful insights. I specialize in building data pipelines, creating interactive dashboards, and developing scalable data solutions that drive business decisions.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="about-journey">
-              My journey in data started with curiosity about patterns and insights hidden in datasets. Today, I combine technical expertise with analytical thinking to build solutions that make data accessible and actionable for businesses.
+            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="about-focus">
+              My expertise spans data engineering and analysis, with a focus on Python, SQL, and modern visualization tools. I'm constantly learning and working towards a career in machine learning and data science.
             </p>
           </div>
           
