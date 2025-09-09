@@ -14,20 +14,26 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark"); // Default to dark mode
 
   useEffect(() => {
-    // Check if user has a preference saved
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
+    // Check if user has a preference saved (only in browser environment)
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem("theme") as Theme;
+      if (savedTheme) {
+        setTheme(savedTheme);
+      }
     }
   }, []);
 
   useEffect(() => {
     // Apply theme to document
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(theme);
-    
-    // Save to localStorage
-    localStorage.setItem("theme", theme);
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove("light", "dark");
+      document.documentElement.classList.add(theme);
+      
+      // Save to localStorage (only in browser environment)
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem("theme", theme);
+      }
+    }
   }, [theme]);
 
   const toggleTheme = () => {
