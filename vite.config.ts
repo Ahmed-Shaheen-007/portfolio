@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+=======
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+>>>>>>> 83e087f67cb2a3020978dbaaea568e2e63042f49
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+<<<<<<< HEAD
   base: "/portfolio/",   // ← هنا حط اسم الريبو بتاعك
+=======
+>>>>>>> 83e087f67cb2a3020978dbaaea568e2e63042f49
   plugins: [
     react(),
     runtimeErrorOverlay(),
