@@ -1,76 +1,61 @@
-import { PieChart, Activity, Brain, ExternalLink, Github } from "lucide-react";
+import { PieChart, Activity, Heart, PiggyBank, Brain, UserCheck, School, ExternalLink, Github } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      icon: PieChart,
-      title: "Sales Analytics Dashboard",
-      description: "Built an interactive Power BI dashboard analyzing sales performance across multiple regions. Implemented automated data refresh and created KPI tracking that helped increase revenue by 15%.",
+      icon: UserCheck,
+      title: "CAUGHT-IN-CLASS",
+      description: "CAUGHT-IN-CLASS is an intelligent classroom attendance system that leverages Python and OpenCV for face recognition. The app automatically detects and records student presence by scanning faces in real time, storing the data securely for easy tracking and reporting. This eliminates manual roll calls and ensures accurate, automated attendance management.",
       tools: [
-        { name: "Power BI", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
-        { name: "SQL", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
+        { name: "YOLO (You Only Look Once)", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
+        { name: "OpenCV", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
         { name: "Python", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
-        { name: "ETL", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" }
+        { name: "NumPy", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" },
+        { name: "Pandas", color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400" }
       ],
       gradientFrom: "from-yellow-500/20",
       gradientTo: "to-yellow-500/5",
       iconColor: "text-yellow-600 dark:text-yellow-400",
-      projectLink: "https://your-live-demo-link-sales.com",
-      sourceLink: "https://github.com/Ahmed-Shaheen-007/sales-analytics"
+      projectLink: "https://github.com/Ahmed-Shaheen-007/CAUGHT-IN-CLASS",
+      sourceLink: "https://github.com/Ahmed-Shaheen-007/CAUGHT-IN-CLASS"
     },
     {
-      icon: Activity,
-      title: "Automated Data Pipeline",
-      description: "Designed and implemented an automated ETL pipeline processing 100GB+ daily data from multiple sources. Reduced data processing time by 60% and improved data quality with validation checks.",
+      icon: PiggyBank,
+      title: "GDG Hackathon – Easefunds",
+      description: "An intelligent personal finance platform designed to help users save money effortlessly. It automatically rounds up transactions, stores spare change in a digital savings box, and uses AI insights to guide users on when to spend and when to save.",
       tools: [
         { name: "Python", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
-        { name: "Apache Airflow", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
-        { name: "PostgreSQL", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
-        { name: "AWS", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" }
+        { name: "AI/ML Models", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
+        { name: "Data Analysis with Pandas", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" },
+        { name: "Flask (for backend prototype)", color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400" }
       ],
       gradientFrom: "from-green-500/20",
       gradientTo: "to-green-500/5",
       iconColor: "text-green-600 dark:text-green-400",
-      projectLink: "https://your-live-demo-link-pipeline.com",
-      sourceLink: "https://github.com/Ahmed-Shaheen-007/data-pipeline"
+      projectLink: "https://github.com/Ahmed-Shaheen-007",
+      sourceLink: "https://github.com/Ahmed-Shaheen-007"
     },
     {
-      icon: Brain,
-      title: "Customer Segmentation Analysis",
-      description: "Performed advanced customer segmentation using machine learning clustering algorithms. Created actionable insights that improved targeted marketing campaigns by 25% conversion rate.",
+      icon: Heart,
+      title: "VITA – Smart Health Monitoring System",
+      description: "A web-based health assistant that extracts and analyzes data from medical reports using OCR and AI logic. It provides automated health insights, interprets lab values, and suggests follow-up actions to support better medical decision-making.",
       tools: [
         { name: "Python", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
-        { name: "Scikit-learn", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
+        { name: "Flask", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
         { name: "Pandas", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" },
-        { name: "Tableau", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" }
+        { name: "Tesseract OCR", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400" }
       ],
       gradientFrom: "from-purple-500/20",
       gradientTo: "to-purple-500/5",
       iconColor: "text-purple-600 dark:text-purple-400",
-      projectLink: "https://your-live-demo-link-segmentation.com",
-      sourceLink: "https://github.com/Ahmed-Shaheen-007/customer-segmentation"
-    },
-    {
-      icon: Activity,
-      title: "Real-time Stock Analysis",
-      description: "Developed a real-time data streaming application for stock market analysis using financial APIs. Created automated alerts and trend analysis with interactive visualizations.",
-      tools: [
-        { name: "Python", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
-        { name: "Pandas", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
-        { name: "NumPy", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" },
-        { name: "Streamlit", color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" }
-      ],
-      gradientFrom: "from-blue-500/20",
-      gradientTo: "to-blue-500/5",
-      iconColor: "text-blue-600 dark:text-blue-400",
-      projectLink: "https://your-live-demo-link-stock.com",
-      sourceLink: "https://github.com/Ahmed-Shaheen-007/stock-analysis"
+      projectLink: "https://github.com/Ahmed-Shaheen-007",
+      sourceLink: "https://github.com/Ahmed-Shaheen-007"
     }
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-br from-background via-muted/20 to-background section-pattern">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" className="py-20 bg-background">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -85,7 +70,7 @@ export default function ProjectsSection() {
             return (
               <div 
                 key={index} 
-                className="glass-card gradient-border rounded-2xl shadow-2xl overflow-hidden card-hover"
+                className="bg-card rounded-xl shadow-lg border border-border overflow-hidden card-hover"
               >
                 <div className={`h-48 bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center`}>
                   <div className="text-center">
