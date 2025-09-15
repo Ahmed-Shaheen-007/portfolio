@@ -5,7 +5,8 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { cartographer } from "@replit/vite-plugin-cartographer";
 
 export default defineConfig(({ mode }) => ({
-  base: '/',
+  // GitHub Pages base path
+  base: "/portfolio/",
 
   plugins: [
     react(),
@@ -26,7 +27,7 @@ export default defineConfig(({ mode }) => ({
   root: path.resolve(__dirname, "client"),
 
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
     rollupOptions: {
       input: {

@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Moon, Sun, Github, Sparkles } from "lucide-react";
 import { useTheme } from "./theme-provider";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,14 +50,21 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const offsetTop = section.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
+    // Navigate to the route first
+    navigate(`/${sectionId === 'home' ? '' : sectionId}`);
+    
+    // Then scroll to the section
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offsetTop = section.offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+    
     setIsMobileMenuOpen(false);
   };
 
