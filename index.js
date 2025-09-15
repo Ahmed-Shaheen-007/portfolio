@@ -91,7 +91,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { cartographer } from "@replit/vite-plugin-cartographer";
 var vite_config_default = defineConfig(({ mode }) => ({
-  // لازم تحط اسم الريبو هنا علشان GitHub Pages يلاقي الفايلات
+  // GitHub Pages base path
   base: "/portfolio/",
   plugins: [
     react(),
