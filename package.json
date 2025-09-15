@@ -5,13 +5,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "server": "tsx server/index.ts",
+    "dev:full": "concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && npm run copy-404",
     "copy-404": "cpx dist/public/index.html dist/public/404.html",
     "serve": "npx serve dist/public",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/public -r https://github.com/Ahmed-Shaheen-007/My-Portfolio.git",
-    "check": "tsc",
+    "deploy": "gh-pages -d dist/public -r https://github.com/Ahmed-Shaheen-007/portfolio.git",
+    "check": "tsc --noEmit",
+    "check:watch": "tsc --noEmit --watch",
+    "lint": "eslint . --ext .ts,.tsx --fix",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
@@ -95,6 +100,7 @@
     "@types/ws": "^8.5.13",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
     "cpx": "^1.5.0",
     "cross-env": "^10.0.0",
     "drizzle-kit": "^0.30.4",

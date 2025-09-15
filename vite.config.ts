@@ -28,13 +28,24 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "client", "index.html"),
+      },
+    },
   },
 
   server: {
     fs: {
-      strict: true,
-      deny: ["**/.*"],
+      strict: false,
+      allow: [".."],
     },
+    port: 3000,
+    open: true,
+    cors: true,
+  },
+
+  preview: {
     port: 3000,
     open: true,
   },

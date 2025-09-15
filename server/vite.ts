@@ -22,17 +22,18 @@ export function log(message: string, source = "express") {
 export async function setupVite(app: Express, server: Server) {
   const vite = await createViteServer({
     ...viteConfig,
-    configFile: false,
+    configFile: path.resolve(import.meta.dirname, "..", "vite.config.ts"),
     server: {
       middlewareMode: true,
       hmr: { server },
     },
-    appType: "custom",
+    appType: "spa",
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
         viteLogger.error(msg, options);
-        process.exit(1);
+        // Don't exit process, just log the error
+        console.error("Vite Error:", msg, options);
       },
     },
   });
@@ -50,14 +51,12 @@ export async function setupVite(app: Express, server: Server) {
       );
 
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`
-      );
-
+      
+      // Transform the HTML with Vite
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
+      console.error("Vite setup error:", e);
       vite.ssrFixStacktrace(e as Error);
       next(e);
     }
